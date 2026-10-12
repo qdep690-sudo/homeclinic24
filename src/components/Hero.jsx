@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import ImageBox from './ImageBox.jsx'
 import Icon from './Icon.jsx'
 import { CONTACT, WHATSAPP_COMMUNITY } from '../data.js'
@@ -15,8 +14,8 @@ export default function Hero({ title, sub, cta, service, image, images, poster, 
         <h1>{title}</h1><p className="lead">{sub}</p>
         <div className="btn-row">
           {/* <button className="btn btn-primary" onClick={() => openBooking(service)}>{cta}<span className="dot">→</span></button> */}
-          {secondary && <Link className="btn btn-outline" to={secondary[1]}>{secondary[0]}</Link>}
-          {secondary && <a className="btn btn-wa" href={WHATSAPP_COMMUNITY} target="_blank" rel="noreferrer"><Icon name="chat" size={18} />Join Our Community</a>}
+          {secondary && <a className="btn btn-wa" href={'https://wa.me/' + CONTACT.whatsappBot.replace(/\D/g, '') + '?text=' + encodeURIComponent('Hi, I would like to book an appointment.')} target="_blank" rel="noreferrer"><Icon name="chat" size={18} />Book via WhatsApp Bot</a>}
+          {secondary && <a className="btn btn-blue" href={WHATSAPP_COMMUNITY} target="_blank" rel="noreferrer"><Icon name="chat" size={18} />Join Our Community</a>}
         </div>
         {pills && <div className="hero-pills">{pills.map((t) => <span key={t}>{t}</span>)}</div>}
         {dark && <div className="btn-row">{cta && <button className="btn btn-white" onClick={() => openBooking(service)}>{cta}<span className="dot">→</span></button>}<a className="btn btn-ghost-light" href={'tel:' + CONTACT.phone.replace(/\s/g, '')}>Call Us</a></div>}

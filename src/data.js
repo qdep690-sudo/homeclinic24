@@ -1,5 +1,5 @@
 // ===== Edit content here =====
-export const CONTACT = { phone: '+91 96066 68266', email: 'care@homeclinic24.in', whatsapp: '+91 74830 68353', location: 'Mysuru, Karnataka, India' }
+export const CONTACT = { phone: '+91 96066 68266', email: 'care@homeclinic24.in', whatsapp: '+91 96066 68266', whatsappBot: '+91 74830 68353', location: 'Mysuru, Karnataka, India' }
 // Community sign-up form
 export const WHATSAPP_COMMUNITY = 'https://docs.google.com/forms/d/e/1FAIpQLSdkTH-JnmGSWryMxgXMEJ7kXPCvK-jMlvXP5O1bUxa0q7QEAQ/viewform'
 export const SERVICES = [
