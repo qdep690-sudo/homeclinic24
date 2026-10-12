@@ -3,7 +3,7 @@ import ImageBox from './ImageBox.jsx'
 import Icon from './Icon.jsx'
 import { CONTACT, WHATSAPP_COMMUNITY } from '../data.js'
 import { useBooking } from '../BookingContext.jsx'
-export default function Hero({ title, sub, cta, service, image, images, alt, secondary, pills, stats, dark }) {
+export default function Hero({ title, sub, cta, service, image, images, poster, alt, secondary, pills, stats, dark }) {
   const { openBooking } = useBooking()
   return (
     <section className="hero2"><div className="container hero2-grid">
@@ -23,7 +23,7 @@ export default function Hero({ title, sub, cta, service, image, images, alt, sec
         {stats && <div className="hero-stats">{stats.map(([v, l]) => <div key={l}><b>{v}</b><span>{l}</span></div>)}</div>}
         {secondary && <div className="trust-row">{['Trusted Healthcare Professionals', 'Personalized Care', 'Convenient Home Visits'].map((t) => <span key={t}><Icon name="check" size={18} />{t}</span>)}</div>}
       </div>
-      {images ? <div className="hero-collage">
+      {poster ? <div className="hero-poster"><span className="poster-plus" aria-hidden="true">+</span><span className="poster-dots" aria-hidden="true" /><img src={poster} alt={alt} /><span className="poster-badge">Care that comes home</span></div> : images ? <div className="hero-collage">
         {images.map((it, i) => { const [src, pos] = [].concat(it); return <div key={src} className={'collage-tile t' + (i + 1)}><img src={src} alt={alt} style={pos ? { objectPosition: pos } : undefined} /></div> })}
         <div className="collage-badge">Care that comes home</div>
       </div> : <ImageBox src={image} alt={alt} className="hero2-img" />}

@@ -6,7 +6,11 @@ export default function HospitalCard() {
   return (
     <div className="hosp">
       <div className="hosp-photo">
-        <img src="/images/hospital-diagnose.jpg" alt="Doctor examining a patient for diagnosis" />
+        <div className="hosp-collage">
+          <img className="c1" src="/images/home-clinic.jpg" alt="Home Clinic doctor visiting a patient at home" style={{ objectPosition: '78% 40%' }} />
+          <img className="c2" src="/images/consult-family.jpg" alt="Doctor consulting a family at home" style={{ objectPosition: '30% 40%' }} />
+          <img className="c3" src="/images/consult-injection.jpg" alt="Injection and treatment at home" style={{ objectPosition: '55% 40%' }} />
+        </div>
         <span className="hosp-tag">Complete Hospital at Home</span>
       </div>
       <div className="hosp-body">
