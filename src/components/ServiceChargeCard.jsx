@@ -6,7 +6,7 @@ export default function ServiceChargeCard({ service }) {
         {service.note && <div className="charge-note">{service.note}</div>}
       </div>
       {service.price && (
-        <div className="charge-price">₹{service.price.toLocaleString('en-IN')}</div>
+        <div className={'charge-price' + (typeof service.price === 'number' ? '' : ' charge-text')}>{typeof service.price === 'number' ? '₹' + service.price.toLocaleString('en-IN') : service.price}</div>
       )}
     </div>
   )

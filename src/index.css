@@ -244,7 +244,7 @@ h1,h2{font-family:'Playfair Display',Georgia,serif}
 .hero2-img span{color:var(--blue);position:relative;z-index:1}
 .hero2-img::before{content:'';position:absolute;inset:16px -16px -16px 16px;border-radius:220px 44px 44px 44px;background:linear-gradient(160deg,var(--green),var(--blue));z-index:-1}
 .hero2-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:220px 44px 44px 44px;border:6px solid #fff;box-shadow:0 24px 50px rgba(36,51,96,.28)}
-.hero2-img::after{content:'Care that comes home';position:absolute;left:-26px;bottom:34px;z-index:2;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);color:var(--blue);font:700 .95rem 'Inter',sans-serif;padding:12px 20px 12px 44px;border-radius:999px;box-shadow:0 12px 28px rgba(36,51,96,.25);background-image:radial-gradient(circle at 22px 50%,var(--green) 0 7px,#c7d3ff 8px 13px,transparent 14px);background-repeat:no-repeat}
+.hero2-img::after{content:none;position:absolute;left:-26px;bottom:34px;z-index:2;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);color:var(--blue);font:700 .95rem 'Inter',sans-serif;padding:12px 20px 12px 44px;border-radius:999px;box-shadow:0 12px 28px rgba(36,51,96,.25);background-image:radial-gradient(circle at 22px 50%,var(--green) 0 7px,#c7d3ff 8px 13px,transparent 14px);background-repeat:no-repeat}
 @media(max-width:860px){.hero2-grid{grid-template-columns:1fr;gap:28px}.hero2-left{padding:28px 22px}.hero2-img{min-height:300px;margin:0 14px 14px 0}.hero2-img img,.hero2-img::before{border-radius:120px 32px 32px 32px}.hero2-img::after{left:10px;bottom:20px}}
 
 /* hero: compact sizing */
@@ -640,3 +640,29 @@ img{max-width:100%}
   .ct-botx p{margin-inline:auto}
   .ct-botx .btn-white{width:100%;justify-content:center}
 }
+
+/* promo bar: book button */
+.promo button{cursor:pointer;border:0;font-family:'Inter',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#fff;color:var(--pink);padding:7px 16px;border-radius:999px;box-shadow:0 4px 12px rgba(0,0,0,.15);transition:transform .2s}
+.promo button:hover{transform:translateY(-2px)}
+@media(max-width:560px){.promo button{font-size:.75rem;padding:6px 12px}}
+/* contact: book button */
+.ct-book{margin-top:22px;box-shadow:0 12px 26px rgba(58,94,240,.28)}
+
+/* header: Book button (after nav on desktop, centred between logo and burger on mobile) */
+.header-book{flex:none;white-space:nowrap;margin-left:4px;box-shadow:0 8px 18px rgba(58,94,240,.28)}
+@media(max-width:860px){.header-book{margin:0;padding:9px 16px;font-size:.88rem}}
+@media(max-width:380px){.header-book{padding:8px 12px;font-size:.8rem}.header-book .dot{display:none}}
+.header-book{padding:10px 22px;font-size:.95rem}
+.header-book .dot{display:none}
+.nav a{white-space:nowrap}
+@media(max-width:1100px){.loc{display:none}.nav{gap:18px;font-size:.94rem}}
+@media(max-width:860px){.header-book{padding:9px 20px;font-size:.9rem}}
+@media(max-width:380px){.header-book{padding:8px 14px;font-size:.82rem}}
+
+/* pricing: text price (e.g. "As per doctor charges") */
+.charge-text{white-space:normal;text-align:right;font-size:.88rem;max-width:46%;line-height:1.3}
+@media(max-width:768px){.charge-text{text-align:left;max-width:100%;font-size:.92rem}}
+.header-call{display:inline-flex;align-items:center;gap:8px}
+
+/* hero poster: green plus badge */
+.poster-plus{background:linear-gradient(135deg,#2ecc71,#128c4a);box-shadow:0 14px 28px rgba(18,140,74,.4)}

@@ -20,7 +20,7 @@ export default function Contact() {
       {/* <div className="ct-band"><div><h3>Prefer to talk to someone?</h3><p>Call us or book a home visit and our team will get back to you.</p></div><div className="btn-row"><a className="btn btn-white" href={'tel:+' + digits(CONTACT.phone)}>Call Now</a><button type="button" className="btn btn-ghost-light" onClick={() => openBooking()}>Book a Home Visit</button></div></div> */}
       <div className="ct-botx">
         <div className="ct-botx-left">
-          <span className="ct-botx-tag"><Icon name="chat" size={16} />WhatsApp Booking Bot</span>
+          <span className="ct-botx-tag"><Icon name="chat" size={16} />WhatsApp Booking</span>
           <h3>Book your appointment <em>in a chat</em></h3>
           <p>No calls, no waiting. Message our bot on WhatsApp and schedule your home visit in a few taps.</p>
           <div className="ct-botx-num"><small>Bot number</small><b>{CONTACT.whatsappBot}</b></div>

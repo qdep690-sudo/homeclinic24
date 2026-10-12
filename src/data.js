@@ -3,8 +3,8 @@ export const CONTACT = { phone: '+91 96066 68266', email: 'care@homeclinic24.in'
 // Community sign-up form
 export const WHATSAPP_COMMUNITY = 'https://docs.google.com/forms/d/e/1FAIpQLSdkTH-JnmGSWryMxgXMEJ7kXPCvK-jMlvXP5O1bUxa0q7QEAQ/viewform'
 export const SERVICES = [
-  { id: 'doctor', img: '/images/consult-family.jpg', title: 'Doctor Home Consultation', desc: 'Get professional medical consultation from qualified doctors in the comfort and privacy of your home.', features: ['Doctor home visit', 'Medical consultation', 'Health assessment', 'Treatment guidance', 'Follow-up care'], cta: 'Book Consultation', to: '/doctor-consultation', price: 599 },
-  { id: 'physio', img: '/images/physio.jpg', title: 'Physiotherapy at Home', desc: 'Receive personalized physiotherapy sessions at home to improve mobility, manage pain and support recovery.', features: ['Personalized assessment', 'One-on-one sessions', 'Pain management', 'Mobility improvement', 'Recovery support'], cta: 'Book Physiotherapy', to: '/physiotherapy', price: 899 },
+  { id: 'doctor', img: '/images/consult-family.jpg', title: 'Doctor Home Consultation', desc: 'Get professional medical consultation from qualified doctors in the comfort and privacy of your home.', features: ['Doctor home visit', 'Medical consultation', 'Health assessment', 'Treatment guidance', 'Follow-up care'], cta: 'Book Consultation', to: '/doctor-consultation', price: 499 },
+  // { id: 'physio', img: '/images/physio.jpg', title: 'Physiotherapy at Home', desc: 'Receive personalized physiotherapy sessions at home to improve mobility, manage pain and support recovery.', features: ['Personalized assessment', 'One-on-one sessions', 'Pain management', 'Mobility improvement', 'Recovery support'], cta: 'Book Physiotherapy', to: '/physiotherapy', price: 899 },
 ]
 export const HOSPITAL_AT_HOME = { id: 'hospital', img: '/images/consult-injection.jpg', title: 'Complete Hospital at Home', desc: 'We don’t just offer home consultation. We bring home nursing, diagnostic support and sample collection to your doorstep, so you get a complete hospital experience without leaving home.', features: [{ t: 'Diagnostic support at home', hot: true }, { t: 'Lab sample collection at home', hot: true }, 'Home nursing care', 'Injections, IV fluids & dressings', 'Doctor visits & follow-ups', 'Physiotherapy at home'] }
 export const PRICING = [
@@ -60,9 +60,9 @@ export const FAQS = [
 export const SLOTS = ['Morning', 'Afternoon', 'Evening']
 export const SERVICE_CHARGES = [
   { category: 'Doctor & Visit Charges', services: [
-    { name: 'Doctor Consultation at Home', price: 499 },
-    { name: 'Brother Visit', price: 199 },
-    { name: 'IP Admission – Doctor Visit', price: 349 },
+    { name: 'Doctor Consultation at Home', price: 999 },
+    { name: 'Brother Visit', price: 399 },
+    { name: 'IP Admission – Doctor Visit', price : "As per doctor charges"},
   ]},
   { category: 'Injections & Procedures', services: [
     { name: 'IM Injection', price: 249 },

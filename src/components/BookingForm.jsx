@@ -43,7 +43,7 @@ export default function BookingForm({ initialService, initialPlan, onDone }) {
         {step > (initialService ? 1 : 0) ? <button className="btn btn-ghost" onClick={() => { setErr(''); setStep(step - 1) }}>Back</button> : <span />}
         {step < 5 ? <button className="btn btn-primary" onClick={next}>Continue</button> : <button className="btn btn-primary" onClick={confirm}>Confirm Booking</button>}
       </div>
-      <p className="note">Demo only: no data is sent anywhere.</p>
+      {/* <p className="note">Demo only: no data is sent anywhere.</p> */}
     </div>
   )
 }
