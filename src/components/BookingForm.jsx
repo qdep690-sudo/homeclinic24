@@ -6,7 +6,7 @@ export default function BookingForm({ initialService, initialPlan, onDone }) {
   const nav = useNavigate()
   const [f, setF] = useState({ name: '', phone: '' })
   const [err, setErr] = useState('')
-  const [id, setId] = useState('')
+  const [done, setDone] = useState(false)
   const [busy, setBusy] = useState(false)
   const set = (k) => (e) => setF({ ...f, [k]: e.target.value })
   const svc = SERVICES.find((s) => s.id === initialService)
@@ -20,8 +20,8 @@ export default function BookingForm({ initialService, initialPlan, onDone }) {
     setErr(''); setBusy(true)
     try {
       const service = svc ? svc.title + (initialService === 'physio' && pkg ? ' – ' + pkg.name : '') : undefined
-      const data = await createBookingRequest({ name, phone: f.phone.replace(/\D/g, '').slice(-10), service })
-      setId('HC24-' + data.id)
+      await createBookingRequest({ name, phone: f.phone.replace(/\D/g, '').slice(-10), service })
+      setDone(true)
     } catch (e) {
       setErr(e.message)
     } finally {
@@ -29,11 +29,11 @@ export default function BookingForm({ initialService, initialPlan, onDone }) {
     }
   }
 
-  if (id) return (
+  if (done) return (
     <div className="confirm">
       <div className="tick"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12l5 5 9-10" /></svg></div>
       <h2>Booking Request Confirmed</h2><p>Thank you for choosing Home Clinic 24. Our team will call you shortly.</p>
-      <div className="summary"><div><span>Booking ID</span><b>{id}</b></div>{svc && <div><span>Service</span><b>{svc.title}{initialService === 'physio' && pkg ? ' – ' + pkg.name : ''}</b></div>}<div><span>Name</span><b>{f.name}</b></div><div><span>Mobile</span><b>{f.phone}</b></div></div>
+      <div className="summary">{svc && <div><span>Service</span><b>{svc.title}{initialService === 'physio' && pkg ? ' – ' + pkg.name : ''}</b></div>}<div><span>Name</span><b>{f.name}</b></div><div><span>Mobile</span><b>{f.phone}</b></div></div>
       <button className="btn btn-primary" onClick={() => { onDone(); nav('/') }}>Back to Home</button>
     </div>
   )
