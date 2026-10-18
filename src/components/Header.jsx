@@ -8,7 +8,7 @@ export default function Header() {
   const [open, setOpen] = useState(false)
   const { openBooking } = useBooking()
   return (<>
-    <div className="promo">Now serving Mysuru: Book your home visit today <a href={'tel:' + CONTACT.phone.replace(/\s/g, '')}>Call Us</a>{/* <button type="button" onClick={() => openBooking()}>Book Now</button> */}</div>
+    <div className="promo">Now serving Mysuru: Book your home visit today <button type="button" onClick={() => openBooking()}>Book Now</button></div>
     <header className="header">
       <div className="container header-row">
         <Link to="/" className="logo-link" onClick={() => setOpen(false)}><img src="/images/logo.png" alt="Home Clinic 24 – Health care at your Door Step" /></Link>
@@ -18,7 +18,7 @@ export default function Header() {
           <div className="nav-head"><span>Menu</span><button type="button" className="nav-close" aria-label="Close menu" onClick={() => setOpen(false)}>✕</button></div>
           {LINKS.map(([to, l]) => <NavLink key={to} to={to} end={to === '/'} onClick={() => setOpen(false)}>{l}</NavLink>)}
         </nav>
-        {/* <button type="button" className="btn btn-primary btn-sm header-book" onClick={() => openBooking()}>Book Now<span className="dot">→</span></button> */}
+        <button type="button" className="btn btn-primary btn-sm header-book" onClick={() => openBooking()}>Book Now<span className="dot">→</span></button>
         <div className="header-actions">
           {/* <button className="btn btn-primary btn-sm" onClick={() => openBooking()}>Book Now<span className="dot">→</span></button> */}
           <button className="burger" aria-label="Menu" aria-expanded={open} onClick={() => setOpen(!open)}><span /><span /><span /></button>

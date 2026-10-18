@@ -18,21 +18,11 @@ export default function Contact() {
       <div className="head ct-head"><span className="ct-eyebrow">Contact Us</span><h1 className="h1s">Need Help?</h1><p>We’re happy to answer your questions.</p></div>
       <div className="ct-grid">{CARDS.map(([i, l, v, href, hint, cls]) => <a key={l} className={'ct-card' + (cls ? ' ' + cls : '')} href={href} {...(href.startsWith('http') ? { target: '_blank', rel: 'noreferrer' } : {})}><span className="ct-ic"><Icon name={i} size={26} /></span><span className="ct-txt"><small>{l}</small><b>{v}</b></span><em>{hint} →</em></a>)}</div>
       {/* <div className="ct-band"><div><h3>Prefer to talk to someone?</h3><p>Call us or book a home visit and our team will get back to you.</p></div><div className="btn-row"><a className="btn btn-white" href={'tel:+' + digits(CONTACT.phone)}>Call Now</a><button type="button" className="btn btn-ghost-light" onClick={() => openBooking()}>Book a Home Visit</button></div></div> */}
-      <div className="ct-botx">
-        <div className="ct-botx-left">
-          <span className="ct-botx-tag"><Icon name="chat" size={16} />WhatsApp Booking</span>
-          <h3>Book your appointment <em>in a chat</em></h3>
-          <p>No calls, no waiting. Message our bot on WhatsApp and schedule your home visit in a few taps.</p>
-          <div className="ct-botx-num"><small>Bot number</small><b>{CONTACT.whatsappBot}</b></div>
-          <a className="btn btn-white" href={BOT_LINK} target="_blank" rel="noreferrer"><Icon name="chat" size={18} />Start Booking on WhatsApp</a>
-        </div>
-        <div className="ct-botx-chat" aria-hidden="true">
-          <div className="ct-chat-top"><span className="ct-chat-av">HC</span><div><b>Home Clinic 24</b><small>Booking bot · online</small></div></div>
-          <div className="ct-chat-body">
-            <p className="me">Hi, I would like to book an appointment.</p>
-            <p className="bot">Welcome to Home Clinic 24! Let’s get your home visit booked.</p>
-            <p className="bot typing"><i /><i /><i /></p>
-          </div>
+      <div className="ct-book">
+        <div className="ct-book-txt"><b>Ready to book a home visit?</b><span>Book in a minute, or message us on WhatsApp.</span></div>
+        <div className="ct-book-btns">
+          <button type="button" className="btn btn-primary" onClick={() => openBooking()}>Book Now</button>
+          <a className="btn btn-wa" href={BOT_LINK} target="_blank" rel="noreferrer"><Icon name="chat" size={18} />Book via WhatsApp</a>
         </div>
       </div>
       <div className="contact">
