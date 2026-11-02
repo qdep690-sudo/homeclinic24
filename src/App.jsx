@@ -12,6 +12,8 @@ import DoctorConsultation from './pages/DoctorConsultation.jsx'
 import Physiotherapy from './pages/Physiotherapy.jsx'
 import Pricing from './pages/Pricing.jsx'
 import Contact from './pages/Contact.jsx'
+import BlogList from './pages/BlogList.jsx'
+import BlogDetail from './pages/BlogDetail.jsx'
 
 function ScrollTop() {
   const { pathname } = useLocation()
@@ -33,27 +35,13 @@ export default function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-            <Route
-            path="/about"
-            element={<About />}
-          />
-          <Route
-            path="/doctor-consultation"
-            element={<DoctorConsultation />}
-          />
-          <Route
-            path="/physiotherapy"
-            element={<Physiotherapy />}
-          />
-          <Route
-            path="/pricing"
-            element={<Pricing />}
-          />
-        
-          <Route
-            path="/contact"
-            element={<Contact />}
-          />
+          <Route path="/about" element={<About />} />
+          <Route path="/doctor-consultation" element={<DoctorConsultation />} />
+          <Route path="/physiotherapy" element={<Physiotherapy />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/blog" element={<BlogList />} />
+          <Route path="/blog/:slug" element={<BlogDetail />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
 

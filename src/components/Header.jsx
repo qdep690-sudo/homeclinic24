@@ -3,7 +3,15 @@ import { Link, NavLink } from 'react-router-dom'
 import { useBooking } from '../BookingContext.jsx'
 import Icon from './Icon.jsx'
 import { CONTACT } from '../data.js'
-const LINKS = [['/', 'Home'], ['/about', 'About Us'], ['/doctor-consultation', 'Doctor Consultation'], ['/physiotherapy', 'Physiotherapy'], ['/pricing', 'Pricing'], ['/contact', 'Contact']]
+const LINKS = [
+  ['/', 'Home'],
+  ['/about', 'About Us'],
+  ['/doctor-consultation', 'Doctor Consultation'],
+  ['/physiotherapy', 'Physiotherapy'],
+  ['/pricing', 'Pricing'],
+  ['/blog', 'Blog'],
+  ['/contact', 'Contact'],
+]
 export default function Header() {
   const [open, setOpen] = useState(false)
   const { openBooking } = useBooking()
